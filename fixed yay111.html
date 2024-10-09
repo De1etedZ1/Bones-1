@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        .body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        .login-container {
+            justify-content: center;
+            background-color: rgb(64, 0, 255);
+            padding: 100px;
+            border-radius: 5px;
+            box-shadow: transparent;
+            display: none; /* Hide the login form initially */
+        }
+
+        
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 88.4%;
+            padding: 10px;
+            border: 2px solid darkgrey;
+            border-radius: 4px;
+            box-shadow: 0 0 10px red;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: darkgrey; 
+            color: black;
+            border: 2px solid darkgray;
+            border-radius: 4px;
+            box-shadow: 0 0 11px red;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff0000;
+        }
+        .loading {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .body:hover {
+            background-color: black;
+        }
+
+        .login-container {
+            background-color: black;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 40px red;
+        }
+
+        .login-container:hover {
+            background-color: grey;
+        }
+
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 88%;
+            padding: 10px;
+            border: 1px solid grey;
+            border-radius: 4px;
+        }
+        button {
+            width: 98%;
+            padding: 10px;
+            background-color: black; 
+            color: rgb(255, 0, 0);
+            border: 5px blue;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: red;
+        }
+
+        button:hover {
+            color: black;
+        }
+
+    </style>
+    <script>
+        function validateForm(event) {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Check if email is a Gmail address
+            const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+            if (!gmailPattern.test(email)) {
+                event.preventDefault(); // Prevent form submission
+                alert("Please enter a valid Gmail address.");
+                return;
+            }
+
+            if (!password) {
+                event.preventDefault(); // Prevent form submission
+                alert("Please enter your password.");
+            }
+        }
+    </script>
+
+    
+
+<body>
+    <div class="login-container">
+        <h2>Login with Gmail</h2>
+        <form onsubmit="validateForm(event)">
+            <div class="form-group">
+                <label for="email">Gmail Address:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+
+    <script>
+        function showLoading() {
+            // Hide the login form
+            document.querySelector('.login-container').style.display = 'none';
+            // Show the loading message
+            document.querySelector('.loading').style.display = 'block';
+
+            // Simulate a loading delay
+            setTimeout(() => {
+                // Redirect to the dashboard after loading
+                window.location.href = "https://www.youtube.com/"; // Change to your target page
+            }, 2000); // 2 seconds loading time
+        }
+
+        function showLogin() {
+            // Display the login form
+            document.querySelector('.login-container').style.display = 'block';
+        }
+
+        window.onload = showLogin; // Show login form on page load
+    </script>
+
+
+    <div class="login-container">
+        <h2>your site name</h2>
+        <form onsubmit="event.preventDefault(); showLoading();">
+            <div class="form-group">
+                <label for="email">Username:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div class="loading">
+        <h2>your customized loading  word/sign...</h2>
+        <p>Please wait while we log you in...</p>
+    </div>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Glowing Box</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            margin: 0;
+            background-color: black; /* Background color */
+        }
+
+        .login-container:hover {
+            width: 250px; /* Width of the box */
+            height: 300px; /* Height of the box */
+            border-radius: 15px; /* Rounded corners */
+            background: linear-gradient(90deg, blue, rgb(255, 0, 0), blue, red, blue, red, blue);
+            background-size: 999% 999%; /* Size of the gradient */
+            animation: glowing 5s ease infinite; /* Animation */
+            box-shadow: 0 0 30px rgb(0, 0, 0); /* Glow effect */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px; /* Font size for text */
+            color: rgb(0, 0, 0); /* Text color */
+        }
+
+        @keyframes glowing {
+            0% {
+                background-position: 0% 50%; /* Start position */
+                box-shadow: 0 0 20px rgb(255, 0, 0);
+            }
+            50% {
+                background-position: 100% 50%; /* Midpoint position */
+                box-shadow: 0 0 40px rgb(38, 0, 255);
+            }
+            100% {
+                background-position: 0% 50%; /* End position */
+                box-shadow: 0 0 20px rgb(255, 0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="rainbow-box"></div>
+        </style>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Water Drop Background</title>
+            <style>
+                body {
+                    margin: 0;
+                    overflow: transparent;
+                    background-color:black;
+                    position: relative;
+                }
+                .drop {
+                    position: absolute;
+                    bottom: 100%;
+                    width: 0.005%;
+                    height: 0.5px;
+                    border-radius: 110%;
+                    background: rgb(35, 0, 87) ;
+                    animation: fall linear infinite;
+                }
+        
+                @keyframes fall {
+                    0% {
+                        transform: translateY(0);
+                        opacity: 55;
+                    }
+                    50% {
+                        transform: translateY(100vh);
+                        opacity: 55;
+                    }
+                }
+            </style>
+
+
+            
+
+
+        </head>
+        <body>
+            <script>
+                const createDrop = () => {
+                    const drop = document.createElement('div');
+                    drop.className = 'drop';
+                    drop.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+                    drop.style.animationDuration = Math.random() *99 + 99 + 's'; // Random fall duration
+                    document.body.appendChild(drop);
+        
+                    // Remove the drop after animation ends
+                    drop.addEventListener('animationend', () => {
+                        drop.remove();
+                    });
+                };
+        
+                setInterval(createDrop, 200); // Create a new drop every 200 milliseconds
+            </script>
+
+
+            
+
+
+        </body>
+        </html>
